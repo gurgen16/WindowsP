@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../MarioLoader/.idea/MarioLoader.iml" filepath="$PROJECT_DIR$/../MarioLoader/.idea/MarioLoader.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/WindowsP.iml" filepath="$PROJECT_DIR$/.idea/WindowsP.iml" />
     </modules>
   </component>
