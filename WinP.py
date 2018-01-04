@@ -2,6 +2,7 @@ import pyhk
 import webbrowser
 import pyautogui
 import win32gui
+import win32con
 import os.path
 import time
 
@@ -14,10 +15,13 @@ hot = pyhk.pyhk()
 def FloatyP():
     print('Jop')
     webbrowser.open(pPath)
-    # foto = win32gui.FindWindow(None, r'Penis.png - InfranView')
-    # print(foto)
-    time.sleep(0.2)
-    fotos=win32gui.GetForegroundWindow()
+    time.sleep(1)
+    foto = win32gui.FindWindow("IrfanView", None)
+
+    win32gui.ShowWindow(foto,win32con.SW_SHOW)
+    #win32gui.SetForegroundWindow(foto)
+    win32gui.BringWindowToTop(foto)
+    #fotos=win32gui.GetForegroundWindow()
     b=600
     h=700
     x = 20
@@ -28,13 +32,13 @@ def FloatyP():
     y_r=1
     yo=True
     while yo==True:
-        if (x+x_d+b>=1920)or(x+x_d<=0):
+        if (x+x_d+b>=2560)or(x+x_d<=0):
             x_d = x_d*(-1)
-        if (y+y_d+h>=1080)or(y+y_d<=0):
+        if (y+y_d+h>=1440)or(y+y_d<=0):
             y_d = y_d*(-1)
         x=x+x_d
         y=y+y_d
-        win32gui.MoveWindow(fotos, x, y, b, h,True)
+        win32gui.MoveWindow(foto, x, y, b, h,True)
         time.sleep(0.01)
 
 def Stopo():
